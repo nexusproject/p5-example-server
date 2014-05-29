@@ -51,7 +51,7 @@ Please have a look into `lib/MyDefaults.pm`
 ##### Signals
 HUP - Disconnect all clients and stop all tasks
 
-Using example
+Usage example
 ---
 ##### Using client:
 List of defined runnable functions:
