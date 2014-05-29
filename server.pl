@@ -81,7 +81,7 @@ $0 = 'perl-server-example';
 # Socket stuff
 my $proto = getprotobyname('tcp');
 socket($ServerSocket, PF_INET, SOCK_STREAM, $proto) or die "socket: $!";
-setsockopt($ServerSocket, SOL_SOCKET, TCP_NODELAY, 1) or die "setsockopt: $!";
+setsockopt($ServerSocket, SOL_SOCKET, TCP_NODELAY, SO_TCP_NODELAY) or die "Cannot set tcp nodelay $! ($^E)";
 setsockopt($ServerSocket, SOL_SOCKET, SO_REUSEADDR, 1) or die "setsockopt: $!";
 bind($ServerSocket, sockaddr_in(DEFAULT_PORT, INADDR_ANY)) or die "bind: $!";
 listen($ServerSocket, SOMAXCONN);   

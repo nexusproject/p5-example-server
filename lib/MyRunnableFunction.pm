@@ -4,17 +4,17 @@
 # Dmitry Sergeev 2014
 #
 
-package MyCommand;
+package MyRunnableFunction;
 
 use strict;
 use MyHwInfo;
 use Package::Constants;
 use Exporter;
-our @ISA          = qw[ Exporter ];
-our @EXPORT     = qw[ %COMMAND ];
+our @ISA    = qw[Exporter];
+our @EXPORT = qw[%RUN_FUNCTION];
 
 # commands 
-our %COMMAND = (
+our %RUN_FUNCTION = (
    get_nics => \&getNetworkDevInfo,
    get_blockdev => \&getBlockDevInfo,
    get_memory_info => \&getMemoryInfo,

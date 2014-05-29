@@ -9,7 +9,7 @@ package MyWorker;
 use strict;
 use threads ('yield', 'exit' => 'threads_only');
 use MyDefaults;
-use MyCommand;
+use MyRunnableFunction;
 use JSON;
 use Exporter;
 use vars qw[@ISA @EXPORT];
@@ -92,7 +92,7 @@ my %PROTO = (
       
       return protoError P_ERROR_PRM_INVALID unless $cmdName;
 
-      if (my $func = $COMMAND{$cmdName}) {
+      if (my $func = $RUN_FUNCTION{$cmdName}) {
          my $thr = threads->create(sub {
             $SIG{KILL} = sub { print "Thread exiting..\n"; threads->exit(); };
 
@@ -112,7 +112,7 @@ my %PROTO = (
          return protoSuccess { task => $tid };
       }
       else {
-         return protoError P_ERROR_NO_COMMAND;
+         return protoError P_ERROR_NO_FUNCTION;
       }
    },
 
@@ -140,7 +140,7 @@ my %PROTO = (
 
    # get list of allowed commands 
    LISTCMDS => sub {
-      return protoSuccess [ keys %COMMAND ];
+      return protoSuccess [ keys %RUN_FUNCTION ];
    },
 
    # get task info
