@@ -1,25 +1,36 @@
 p5-example-server
 =================
 
-The threaded server example
+This is the small threaded server that capable of performing the remote functions
+This just a code sample. Made for fun! :-)
 
-Installation
-===
+Installation & Dependencies
+---
+1. Clone this repo.
+2. Install perl JSON lib
+using apt:
+-
+apt-get install libjson-perl
 
-Dependencies
-===
+by hands:
+-
+http://search.cpan.org/~makamaka/JSON-2.90/lib/JSON.pm
+
+
+
+
 
 Protocol
-===
+---
 
 Using example
-===
+---
 
 Defined Functions
-===
+---
 
 Signals
-===
+---
 
 Its tested!
-===
+---
