@@ -182,5 +182,5 @@ Get information about nics
 Tested:
 ---
 * Ubuntu/Linaro 4.6.3-1ubuntu5
-* Debian
+
 
