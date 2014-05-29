@@ -22,7 +22,7 @@ Protocol
 Simple application-level protocol, running in the form of a request-response.
 Client should send the request in form:
 ```
-<PROTO CMD> PRM1 PRMn
+<PROTO CMD> PRM PRMn
 ```
 
 Server replies by serialized JSON
