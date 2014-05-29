@@ -1,9 +1,9 @@
 p5-example-server
 =================
 
-This is the small threaded server that capable of performing the remote functions asynchronously.
+This is the small server that capable of performing the remote functions asynchronously.
 
-This project just my perl5 code sample. Made for fun! :-)
+This project just my perl5 code sample. Made just for fun! :-)
 
 Installation & Dependencies
 ---
@@ -51,7 +51,7 @@ Please have a look into `lib/MyDefaults.pm`
 ##### Signals
 HUP - Disconnect all clients and stop all tasks
 
-Using example
+Usage example
 ---
 ##### Using client:
 List of defined runnable functions:
