@@ -17,10 +17,6 @@ apt-get install libjson-perl
 by hands:
 http://search.cpan.org/~makamaka/JSON-2.90/lib/JSON.pm
 
-
-
-
-
 Protocol
 ---
 Simple application-level protocol, running in the form of a request-response.
@@ -42,6 +38,15 @@ INFO     | task no                   | Get info about task
 STOP     | task no                   | Stop task 
 KILLALL  | -                         | Kill all tasks
 
+Server
+---
+##### Starting
+`./server.pl`
+or to daemonize
+`./server.pl -d`
+
+##### Signals
+HUP - Disconnect all clients and stop all tasks
 
 Using example
 ---
