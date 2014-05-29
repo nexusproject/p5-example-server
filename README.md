@@ -172,6 +172,7 @@ dvm@dvm-VirtualBox:~/Work/p5-example-server$ ./client.pl get 2
 }
 ```
 #####get_nics
+Get information about nics
 
 Tested:
 ---
