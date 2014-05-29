@@ -3,7 +3,7 @@ p5-example-server
 
 This is the small threaded server that capable of performing the remote functions.
 
-This just a code sample.Made for fun! :-)
+This just a code sample. Made for fun! :-)
 
 Installation & Dependencies
 ---
