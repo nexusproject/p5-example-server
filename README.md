@@ -31,7 +31,7 @@ Client should send the request in form:
 
 Server replies by serialized JSON
 
-###Protocol Commands:
+####Protocol Commands:
 Command  | Parameters                | Description
 ---------|---------------------------|-------------
 LIST     | -                         | List of current server tasks
@@ -46,6 +46,7 @@ KILLALL  | -                         | Kill all tasks
 Using example
 ---
 #### Using client:
+List of defined runnable functions:
 ```
 ./client.pl listcmds
 [
@@ -54,6 +55,31 @@ Using example
   'echo',
   'get_memory_info'
 ]
+```
+Run function, get list tasks and get the result:
+```
+./client.pl run echo
+{
+  'task' => '1'
+}
+
+./client.pl list
+[
+  {
+    'task' => '1',
+    'started' => 1401364683,
+    'ready' => 1,
+    'command' => 'echo'
+  }
+]
+
+./client.pl get 1
+{
+  'Command' => 'echo',
+  'Result' => {
+    'echo' => 'Hello there!'
+  }
+}
 ```
 
 Defined Functions
