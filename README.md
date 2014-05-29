@@ -45,7 +45,7 @@ KILLALL  | -                         | Kill all tasks
 
 Using example
 ---
-#### Using client:
+##### Using client:
 List of defined runnable functions:
 ```
 ./client.pl listcmds
@@ -81,7 +81,7 @@ Run function, get list tasks and get the result:
   }
 }
 ```
-####Same using telnet :-) 
+#####Same using telnet :-) 
 ```
 telnet localhost 1234
 Trying 127.0.0.1...
