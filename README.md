@@ -173,8 +173,8 @@ dvm@dvm-VirtualBox:~/Work/p5-example-server$ ./client.pl get 2
 ```
 #####get_nics
 
-Signals
+Tested:
 ---
+* Ubuntu/Linaro 4.6.3-1ubuntu5
+* Debian
 
-Its tested!
----
