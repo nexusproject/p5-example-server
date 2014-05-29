@@ -93,6 +93,69 @@ listcmds
 
 Defined Functions
 ---
+#####echo
+Just echo. Can be runned with parameter - delay (in seconds)
+```
+./client.pl run echo 10 
+```
+#####get_memory_info
+Get system information
+#####get_blockdev
+Get indormation about block devices. Supports options: disk/cd/floppy
+Example:
+```
+./client.pl run get_blockdev disk
+{
+  'task' => '2'
+}
+dvm@dvm-VirtualBox:~/Work/p5-example-server$ ./client.pl get 2
+{
+  'Command' => 'get_blockdev',
+  'Result' => {
+    'sda2' => {
+      'devname' => '/dev/sda2',
+      'bus' => 'ata',
+      'serial' => 'VBOX_HARDDISK_VB36fbd3f0-95aa65cf',
+      'model' => 'VBOX_HARDDISK',
+      'device' => '/devices/pci0000',
+      'subsystem' => 'block',
+      'size' => '660603904',
+      'type' => 'partition'
+    },
+    'sda' => {
+      'devname' => '/dev/sda',
+      'bus' => 'ata',
+      'serial' => 'VBOX_HARDDISK_VB36fbd3f0-95aa65cf',
+      'model' => 'VBOX_HARDDISK',
+      'device' => '/devices/pci0000',
+      'subsystem' => 'block',
+      'size' => undef,
+      'type' => 'disk'
+    },
+    'sda5' => {
+      'devname' => '/dev/sda5',
+      'bus' => 'ata',
+      'serial' => 'VBOX_HARDDISK_VB36fbd3f0-95aa65cf',
+      'model' => 'VBOX_HARDDISK',
+      'device' => '/devices/pci0000',
+      'subsystem' => 'block',
+      'size' => '660602880',
+      'type' => 'partition'
+    },
+    'sda1' => {
+      'devname' => '/dev/sda1',
+      'bus' => 'ata',
+      'serial' => 'VBOX_HARDDISK_VB36fbd3f0-95aa65cf',
+      'model' => 'VBOX_HARDDISK',
+      'device' => '/devices/pci0000',
+      'subsystem' => 'block',
+      'size' => '7926185984',
+      'type' => 'partition'
+    }
+  }
+}
+```
+#####get_nics
 
 Signals
 ---
