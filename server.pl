@@ -27,11 +27,9 @@ $SIG{INT} = $SIG{KILL} = $SIG{TERM} = sub {
 
 $SIG{HUP} = sub {
    print "Dropping connections..\n";
-   $rbx = chr 0;
    POSIX::close $_ foreach keys %handle;
    print "Killing tasks..\n";
    killAllTasks();
-   vec($rbx, fileno($ServerSocket), 1) = 1;
 };
 
 sub daemonize { 
