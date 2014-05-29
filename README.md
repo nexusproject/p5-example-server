@@ -23,6 +23,27 @@ http://search.cpan.org/~makamaka/JSON-2.90/lib/JSON.pm
 
 Protocol
 ---
+Simple application-level protocol, running in the form of a request-response.
+Client should send the request in form:
+```
+<PROTO CMD> PRM1 PRMn
+```
+
+Server replies by serialized JSON
+
+
+
+###Protocol Commands:
+Command  | Parameters                | Description
+---------|---------------------------|-------------
+LIST     | none                      |
+LISTCMDS | none                      |
+RUN      | runnable function name    |
+GET      | task no                   |
+INFO     | task no                   |
+STOP     | task no                   | 
+KILLALL  | none                      |
+
 
 Using example
 ---
