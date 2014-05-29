@@ -45,6 +45,9 @@ Server
 or to daemonize
 `./server.pl -d`
 
+##### Configuration?
+Pls look into `lib/MyDefaults.pm`
+
 ##### Signals
 HUP - Disconnect all clients and stop all tasks
 
