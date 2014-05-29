@@ -33,9 +33,9 @@ Command  | Parameters                | Description
 LIST     | -                         | List of current server tasks
 LISTCMDS | -                         | List of defined runnable functions
 RUN      | runnable function & prms  | Executing the function
-GET      | task no                   | Get the result
-INFO     | task no                   | Get info about task
-STOP     | task no                   | Stop task 
+GET      | task id                   | Get the result
+INFO     | task id                   | Get info about task
+STOP     | task id                   | Stop task 
 KILLALL  | -                         | Kill all tasks
 
 Server
