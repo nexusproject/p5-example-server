@@ -46,7 +46,7 @@ or to daemonize
 `./server.pl -d`
 
 ##### Configuration?
-Pls look into `lib/MyDefaults.pm`
+Please have a look into `lib/MyDefaults.pm`
 
 ##### Signals
 HUP - Disconnect all clients and stop all tasks
@@ -183,7 +183,7 @@ Example:
 Get information about nics
 
 ####I want to define my own function, what i should do!? :-()
-Please have a look into lib/MyRunnableFunction.pm
+Please have a look into `lib/MyRunnableFunction.pm`
 
 Tested:
 ---
