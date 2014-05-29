@@ -99,9 +99,25 @@ Just echo. Can be runned with parameter - delay (in seconds)
 ./client.pl run echo 10 
 ```
 #####get_memory_info
-Get system information
+Memory info from `/proc/meminfo`. You can specify a list of keys by listing them in the parameters. 
+Example:
+```
+./client.pl run get_memory_info MemTotal MemFree
+{
+  'task' => '3'
+}
+./client.pl get 3
+{
+  'Command' => 'get_memory_info',
+  'Result' => {
+    'MemTotal' => '628876 kB',
+    'MemFree' => '55208 kB'
+  }
+}
+```
+
 #####get_blockdev
-Get indormation about block devices. Supports options: disk/cd/floppy
+Get information about block devices. Supports options: disk/cd/floppy
 Example:
 ```
 ./client.pl run get_blockdev disk
