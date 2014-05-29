@@ -81,6 +81,15 @@ Run function, get list tasks and get the result:
   }
 }
 ```
+####Same using telnet :-) 
+```
+telnet localhost 1234
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+listcmds
+{"Payload":["get_blockdev","get_nics","echo","get_memory_info"],"Success":1}Connection closed by foreign host.
+```
 
 Defined Functions
 ---
