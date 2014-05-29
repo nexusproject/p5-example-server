@@ -129,7 +129,7 @@ Example:
 {
   'task' => '2'
 }
-dvm@dvm-VirtualBox:~/Work/p5-example-server$ ./client.pl get 2
+./client.pl get 2
 {
   'Command' => 'get_blockdev',
   'Result' => {
