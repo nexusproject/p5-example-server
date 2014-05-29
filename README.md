@@ -31,22 +31,30 @@ Client should send the request in form:
 
 Server replies by serialized JSON
 
-
-
 ###Protocol Commands:
 Command  | Parameters                | Description
 ---------|---------------------------|-------------
-LIST     | -                         |
-LISTCMDS | -                         |
-RUN      | runnable function name    |
-GET      | task no                   |
-INFO     | task no                   |
-STOP     | task no                   | 
-KILLALL  | -                         |
+LIST     | -                         | List of current server tasks
+LISTCMDS | -                         | List of defined runnable functions
+RUN      | runnable function name    | Executing the function
+GET      | task no                   | Running the function
+INFO     | task no                   | Get info about task
+STOP     | task no                   | Stop task 
+KILLALL  | -                         | Kill all tasks
 
 
 Using example
 ---
+#### Using client:
+```
+./client.pl listcmds
+[
+  'get_blockdev',
+  'get_nics',
+  'echo',
+  'get_memory_info'
+]
+```
 
 Defined Functions
 ---
