@@ -27,7 +27,7 @@ $SIG{INT} = $SIG{KILL} = $SIG{TERM} = sub {
 
 $SIG{HUP} = sub {
    print "Dropping connections..\n";
-   POSIX::close $_ foreach keys %handle;
+   closeHandle $_ foreach keys %handle;
    print "Killing tasks..\n";
    killAllTasks();
 };
