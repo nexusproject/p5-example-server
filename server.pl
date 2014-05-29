@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 #
-# Simple nonblocking threaded server
+# Simple server
 # - code sample -
 # Dmitry Sergeev 2014
 #
@@ -8,7 +8,7 @@
 use strict;
 #use IO::Socket::INET # XXX: wanna show the low-level approach 
 #use IO::Select       # this an example, so only hardcore )
-use Socket qw[:DEFAULT IPPROTO_TCP TCP_NODELAY];
+use Socket qw[:DEFAULT IPPROTO_TCP];
 use POSIX qw[:errno_h :fcntl_h setsid];
 use lib 'lib';
 use MyDefaults;
