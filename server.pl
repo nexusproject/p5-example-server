@@ -7,7 +7,7 @@
 
 use strict;
 #use IO::Socket::INET # XXX: wanna show the low-level approach 
-#use IO::Select          # this an example, so only hardcore )
+#use IO::Select       # this an example, so only hardcore )
 use Socket qw[:DEFAULT IPPROTO_TCP TCP_NODELAY];
 use POSIX qw[:errno_h :fcntl_h setsid];
 use lib 'lib';
@@ -91,6 +91,7 @@ $rbx = chr 0;
 vec($rbx, fileno($ServerSocket), 1) = 1;
 
 for (;;) {
+   # XXX: For linux epoll is better, but this is an classic.
    my $nf = select(my $rbs=$rbx, undef, undef, 1);
 
    if ($nf > 0) {
