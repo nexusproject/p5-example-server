@@ -3,7 +3,7 @@ p5-example-server
 
 This is the small threaded server that capable of performing the remote functions asynchronously.
 
-This just a my perl5 code sample. Made for fun! :-)
+This project just my perl5 code sample. Made for fun! :-)
 
 Installation & Dependencies
 ---
