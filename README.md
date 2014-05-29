@@ -33,7 +33,7 @@ Command  | Parameters                | Description
 LIST     | -                         | List of current server tasks
 LISTCMDS | -                         | List of defined runnable functions
 RUN      | runnable function name    | Executing the function
-GET      | task no                   | Running the function
+GET      | task no                   | Get the result
 INFO     | task no                   | Get info about task
 STOP     | task no                   | Stop task 
 KILLALL  | -                         | Kill all tasks
