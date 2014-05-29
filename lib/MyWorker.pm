@@ -37,7 +37,7 @@ sub taskState {
 sub killTask {
    my $task_id = shift;
    if (my $task = $TASK{$task_id}) {
-      $task->{thread}->kill('KILL')->detach() if $task->{thread}->is_running;
+      $task->{thread}->is_running ? $task->{thread}->kill('KILL')->detach() : $task->{thread}->join();
       delete $TASK{$task_id};
    }
 }
