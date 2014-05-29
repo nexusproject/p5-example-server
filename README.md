@@ -1,7 +1,7 @@
 p5-example-server
 =================
 
-This is the small server that capable of performing the remote functions asynchronously.
+This is the small server that capable of performing remote functions asynchronously.
 
 This project just my perl5 code sample. Made just for fun! :-)
 
