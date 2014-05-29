@@ -36,13 +36,13 @@ Server replies by serialized JSON
 ###Protocol Commands:
 Command  | Parameters                | Description
 ---------|---------------------------|-------------
-LIST     | none                      |
-LISTCMDS | none                      |
+LIST     | -                         |
+LISTCMDS | -                         |
 RUN      | runnable function name    |
 GET      | task no                   |
 INFO     | task no                   |
 STOP     | task no                   | 
-KILLALL  | none                      |
+KILLALL  | -                         |
 
 
 Using example
