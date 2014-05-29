@@ -104,7 +104,7 @@ Defined Functions
 #####echo
 Just echo. Can be runned with parameter - delay (in seconds)
 ```
-./client.pl run echo 10 
+./client.pl run echo 5 
 ```
 #####get_memory_info
 Memory info from `/proc/meminfo`. You can specify a list of keys by listing them in the parameters. 
