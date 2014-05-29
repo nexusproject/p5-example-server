@@ -75,13 +75,12 @@ if ($__pid) {
 
 print "Starting..\n";
 daemonize() if $ARGV[0] && $ARGV[0] eq '-d';
-system "echo $$ > /tmp/perl-server-example.pid";
+system "echo $$ > $__pidfile";
 $0 = 'perl-server-example';
 
 # Socket stuff
 my $proto = getprotobyname('tcp');
 socket($ServerSocket, PF_INET, SOCK_STREAM, $proto) or die "socket: $!";
-setsockopt($ServerSocket, SOL_SOCKET, TCP_NODELAY, SO_TCP_NODELAY) or die "Cannot set tcp nodelay $! ($^E)";
 setsockopt($ServerSocket, SOL_SOCKET, SO_REUSEADDR, 1) or die "setsockopt: $!";
 bind($ServerSocket, sockaddr_in(DEFAULT_PORT, INADDR_ANY)) or die "bind: $!";
 listen($ServerSocket, SOMAXCONN);   
@@ -105,7 +104,8 @@ for (;;) {
                   ts => time() 
                };
 
-               fcntl($client, F_SETFL, O_NONBLOCK);
+               my $flags = fcntl($client, F_GETFL, 0);
+               fcntl($client, F_SETFL, $flags | O_NONBLOCK);
                vec($rbx, fileno($client), 1) = 1;
             }
          }

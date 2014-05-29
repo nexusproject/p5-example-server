@@ -16,7 +16,6 @@ use vars qw[@ISA @EXPORT];
 
 # Config values
 use constant DEFAULT_PORT     => 1234;
-use constant SO_TCP_NODELAY   => 1; # ! root
 use constant CLIENT_TIMEOUT   => 30; # seconds
 use constant TASK_RUN_TTL     => 10; # 0 - turned off
 use constant TASK_RESULT_TTL  => 60; # 0 - turned off
