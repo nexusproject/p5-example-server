@@ -182,6 +182,9 @@ Example:
 #####get_nics
 Get information about nics
 
+####I want to define my own function, what i should do!? :-()
+Please have a look into lib/MyRunnableFunction.pm
+
 Tested:
 ---
 * Ubuntu/Linaro 4.6.3-1ubuntu5
