@@ -75,6 +75,7 @@ sub getBlockDevInfo {
    my @target_types = grep { $d_type ? $d_type eq $_ : 1 } qw[disk cd floppy];
    return undef unless @target_types;
 
+   # NOTE: This approach didnt support IDE drives. Be aware! ))
    my $info;
    udevWalk(sub {
       my ($name, $device, $stub) = @_;
