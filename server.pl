@@ -7,7 +7,7 @@
 
 use strict;
 #use IO::Socket::INET # XXX: wanna show the low-level approach 
-#use IO::Select       # this an example, so only hardcore )
+#use IO::Select       # this an example, so, rock n roll )
 use Socket qw[:DEFAULT IPPROTO_TCP];
 use POSIX qw[:errno_h :fcntl_h setsid];
 use lib 'lib';

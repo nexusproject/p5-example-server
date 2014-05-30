@@ -106,7 +106,7 @@ sub getNetworkDevInfo {
             device    => $device,
             model     => $stub->{ID_MODEL_FROM_DATABASE},
             bus       => $stub->{ID_BUS},
-            subsystem => $stub->{SUBSYSTEM},
+            subsystem => $stub->{SUBSYSTEM}
          };
       }  
    });
@@ -114,3 +114,4 @@ sub getNetworkDevInfo {
    return $info;
 }
 
+1;

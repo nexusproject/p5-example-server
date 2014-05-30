@@ -28,3 +28,5 @@ our %RUN_FUNCTION = (
       return { echo => 'Hello there!' };
    }
 );
+
+1;
