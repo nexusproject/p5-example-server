@@ -13,13 +13,13 @@ use Exporter;
 our @ISA    = qw[Exporter];
 our @EXPORT = qw[%RUN_FUNCTION];
 
-# commands 
+# Functions
 our %RUN_FUNCTION = (
    get_nics => \&getNetworkDevInfo,
    get_blockdev => \&getBlockDevInfo,
    get_memory_info => \&getMemoryInfo,
 
-   # Special commands
+   # Special
    echo => sub {
       foreach (0 .. $_[0] || 0) {
          sleep 1;
