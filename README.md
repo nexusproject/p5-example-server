@@ -182,7 +182,7 @@ Example:
 #####get_nics
 Get information about nics
 
-####I want to define my own function, what i should do!? :-()
+####I want to define my own function, what should i do!? :-()
 Please have a look into `lib/MyRunnableFunction.pm`
 
 Tested:
