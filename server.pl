@@ -6,8 +6,6 @@
 #
 
 use strict;
-#use IO::Socket::INET # XXX: wanna show the low-level approach 
-#use IO::Select       # this an example, so, rock n roll )
 use Socket qw[:DEFAULT IPPROTO_TCP];
 use POSIX qw[:errno_h :fcntl_h setsid];
 use lib 'lib';
@@ -17,7 +15,7 @@ use MyWorker;
 my (%handle, $ServerSocket, $rbx);
 
 # Dealing w signals
-$SIG{INT} = $SIG{KILL} = $SIG{TERM} = sub {
+$SIG{INT} = $SIG{TERM} = $SIG{QUIT} = sub {
    POSIX::close $ServerSocket;
    print "Killing tasks..\n";
    killAllTasks();
@@ -88,7 +86,6 @@ $rbx = chr 0;
 vec($rbx, fileno($ServerSocket), 1) = 1;
 
 for (;;) {
-   # XXX: For linux epoll is better, but this is an classic.
    my $nf = select(my $rbs=$rbx, undef, undef, 1);
 
    if ($nf > 0) {
@@ -108,9 +105,6 @@ for (;;) {
             }
          }
          else {
-            # XXX: Theoretically, with O_NONBLOCK sockets, this approach may not guarantee the data integrity.
-            # But i think thats enough for this case. 
-
             # Communicating w client
             my $client = $handle{$fd}->{sock};
             my $ret = read($client, my $data, POSIX::BUFSIZ);
