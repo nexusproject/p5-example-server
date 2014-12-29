@@ -14,7 +14,7 @@ using apt:
 apt-get install libjson-perl
 ```
 
-or by hands:
+or manually:
 http://search.cpan.org/~makamaka/JSON-2.90/lib/JSON.pm
 
 Protocol
