@@ -15,7 +15,7 @@ use MyWorker;
 my (%handle, $ServerSocket, $rbx);
 
 # Dealing w signals
-$SIG{INT} = $SIG{TERM} = $SIG{QUIT} = sub {
+$SIG{INT} = sub {
    POSIX::close $ServerSocket;
    print "Killing tasks..\n";
    killAllTasks();
